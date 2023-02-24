@@ -7,10 +7,12 @@ $(document).ready(function(){
         var vars = {
             positionX  : 0,
             positionY : 0,
+            pageX: 0,
+            pageY: 0,
             divPosition : [],
         };
     
-        var root = this;
+        // var root = this;
 
         this.construct = function(options){
             $.extend(vars , options);
@@ -25,6 +27,10 @@ $(document).ready(function(){
 
         this.returnPosition = function(){
             return {'x': vars.positionX, 'y': vars.positionY}
+        }
+
+        this.returnPagePosition = function(){
+            return {'x': vars.pageX, 'y': vars.pageY}
         }
 
         this.returnPercentage = function(){
@@ -47,9 +53,12 @@ $(document).ready(function(){
             var dot = new createDot({
                 positionX: pointer_x,
                 positionY: pointer_y,
+                pageX: e.pageX,
+                pageY: e.pageY,
                 divPosition: [interactive_width, interactive_height]
             });
             addResumeElm(resume_elm, dot);
+            appendDot(dot);
             console.log(dot.returnPercentage());
         })
     }
@@ -63,5 +72,16 @@ $(document).ready(function(){
 
     function addResumeElm(initial_elm, dot){
         initial_elm.append($('<p>').html("x: " + dot.returnPosition().x + " y: " + dot.returnPosition().y))
+    }
+
+    function appendDot(dot){
+        let new_dot = $('<div>').addClass('dot-elm');
+        debugger;
+        new_dot.css({
+            'left': dot.returnPagePosition().x - new_dot.width() + "px",
+            'top': dot.returnPagePosition().y - new_dot.height() + "px",
+        })
+        console.log(new_dot);
+        $('body').append(new_dot);
     }
 })
