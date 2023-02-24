@@ -3,7 +3,8 @@ $(document).ready(function(){
   if(window.matchMedia("(max-width: 767px)").matches){
       // Mobile version, we click on the element
       clickOnElement("click", "mobile");
-  } else{
+  }
+  else{
       // Desktop version, mouseover here
       clickOnElement("mouseover", "desktop");
       // Close active popup clicking anywhere on document. Not working on mobile.
@@ -70,27 +71,8 @@ $(document).ready(function(){
     p.append(text_append);
 
     $('.div-interactive').append(p);
-    console.log(p);
 
     return p
   }
-
-  var items = [
-    {
-      id: 'test1',
-      title: 'Communiquer',
-      text: 'Microphone différenciel à annulation de bruit.',
-    },
-    {
-      id: 'test2',
-      title: 'Contrôler',
-      text: "Contrôle du volume et de la prise d'appel.",
-    },
-    {
-      id: 'test3',
-      title: 'Coordonner',
-      text: 'Connexion au réseau Intercom.',
-    },
-  ]
 
 })

@@ -1,22 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event){
-    var items = [
-        {
-            id: 'test1',
-            title: 'Communiquer',
-            text: 'Microphone différenciel à annulation de bruit.',
-        },
-        {
-            id: 'test2',
-            title: 'Contrôler',
-            text: "Contrôle du volume et de la prise d'appel.",
-        },
-        {
-            id: 'test3',
-            title: 'Coordonner',
-            text: 'Connexion au réseau Intercom.',
-        },
-    ];
-
+    // TODO: VANILLA JS VERSION
     if(window.matchMedia("(max-width: 767px)").matches){
         clickOnElement("click", "mobile");
     }
@@ -92,9 +75,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         text_append.innerHTML = text;
 
         close_tabs.addEventListener("click", function(){
-            // this.parentElement.parentElement.animate({
-            //     opacity: '1'
-            // }, {duration: 30})
             this.parentElement.parentElement.remove();
         })
 

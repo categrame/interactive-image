@@ -1,1 +1,1 @@
-# interactive-image
+# interactive image responsive

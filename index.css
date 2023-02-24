@@ -34,21 +34,7 @@
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
-/* .elm:hover {
-  animation-play-state: paused;
-} */
-#test1 {
-  top: 10.4%;
-  left: 80.7%;
-}
-#test2 {
-  top: 482px;
-  left: 134px;
-}
-#test3 {
-  top: 480px;
-  left: 66px;
-}
+
 h2 {
   margin-top:inherit;
   font-family: 'Roboto', sans-serif;
@@ -82,19 +68,4 @@ h2 {
 }
 .popup-show {
   opacity: 1;
-}
-@media screen and (max-width: 767px){
-  /* .popup {
-    opacity: 1;
-  } */
-  /* .popup h2 {
-    font-size: 40px;
-  }
-  .popup p {
-    font-size: 35px;
-  }
-  .close-tab {
-    text-align: right;
-    font-size: 35px;
-  } */
 }
