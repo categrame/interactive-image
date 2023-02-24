@@ -1,0 +1,15 @@
+.delimit-div-zone {
+    border: solid 2px red;
+}
+.dot-elm {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;;
+}
+.display-resume {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 2px solid black;
+}
